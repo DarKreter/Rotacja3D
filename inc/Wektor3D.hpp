@@ -2,7 +2,7 @@
 #define WEKTOR3D_HH
 
 
-#include "Wektor.hh"
+#include "Wektor.hpp"
 
 /*!
  * \brief Klasa Wektor3D ma być instancją szablonu Wektor<>

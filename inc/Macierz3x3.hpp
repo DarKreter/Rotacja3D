@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-#include "Macierz.hh"
+#include "Macierz.hpp"
 
 /*!
  * \brief Klasa Macierz3x3 ma być instancją szablonu Macierz<>
@@ -12,7 +12,7 @@
  *  Tutaj trzeba opisac instancję szablonu. Jakie pojecie ona modeluje 
  *  i jakie ma glowne cechy.
  */
-typedef Macierz<3>  Macierz3x3;
+typedef MacierzRot<3>  Macierz3x3;
 
 
 #endif

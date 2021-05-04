@@ -1,4 +1,4 @@
-#include "Wektor3D.hh"
+#include "Wektor3D.hpp"
 
 
 /*

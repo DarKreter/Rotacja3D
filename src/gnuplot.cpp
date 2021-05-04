@@ -1,3 +1,5 @@
+#if 0
+
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -12,7 +14,7 @@
 #pragma implementation
 #endif
 
-#include "lacze_do_gnuplota.hh"
+#include "gnuplot.hpp"
 
 using namespace std;
 
@@ -457,3 +459,6 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
 
 
 } //___ Koniec przestrzeni nazw: PzG ____________________________________________
+
+
+#endif
