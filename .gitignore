@@ -1,4 +1,6 @@
 .vs/
+.idea/
+cmake-build-debug/
 bin/
 *.sln
 *.vcxproj*
