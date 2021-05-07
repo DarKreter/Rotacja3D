@@ -1,5 +1,6 @@
 .vs/
 .idea/
+build/
 cmake-build-debug/
 bin/
 *.sln

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotacja3D: Plik źródłowy Macierz.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo Simple Black.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rotacja3D
+   &#160;<span id="projectnumber">0.1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_macierz_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Macierz.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_macierz_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MACIERZ_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MACIERZ_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_wektor_8hpp.html">Wektor.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> SIZE&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_macierz_rot.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_macierz_rot.html">MacierzRot</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1">   10</a></span>&#160;    std::array&lt;Wektor&lt;SIZE&gt;, SIZE&gt; <a class="code" href="class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1">tab</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">   13</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">Axis</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498aa70baf8386f8c1f5cd75ed3038fdd89b">OX</a>, <a class="code" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f">OY</a>, <a class="code" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45">OZ</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6">   18</a></span>&#160;    <a class="code" href="class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6">MacierzRot</a>();   <span class="comment">//Macierz jednostkowa</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d">   19</a></span>&#160;    <a class="code" href="class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d">MacierzRot</a>(<span class="keywordtype">double</span> alpha, <a class="code" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">Axis</a> o);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d">   20</a></span>&#160;    <a class="code" href="class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d">MacierzRot</a>(<span class="keyword">const</span> <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a>&amp; druga);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03">   22</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;SIZE&gt;</a>&amp; <a class="code" href="class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03">operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b">   23</a></span>&#160;    <a class="code" href="class_wektor.html">Wektor&lt;SIZE&gt;</a>&amp; <a class="code" href="class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b">operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a">   25</a></span>&#160;    <a class="code" href="class_wektor.html">Wektor&lt;SIZE&gt;</a> <a class="code" href="class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_wektor.html">Wektor&lt;SIZE&gt;</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87">   26</a></span>&#160;    <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a> <a class="code" href="class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_macierz_rot.html#a133665294f8f3677e6786704456148e2">   28</a></span>&#160;    <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a>&amp; <a class="code" href="class_macierz_rot.html#a133665294f8f3677e6786704456148e2">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a>&amp; drugi);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> SIZE&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_macierz_8hpp.html#abe7a16c61b35bfeead990e29e0e894ef">   33</a></span>&#160;std::ostream&amp; <a class="code" href="_macierz_8hpp.html#abe7a16c61b35bfeead990e29e0e894ef">operator&lt;&lt;</a>(std::ostream&amp; strm, <span class="keyword">const</span> <a class="code" href="class_macierz_rot.html">MacierzRot&lt;SIZE&gt;</a>&amp; mac);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;Macierz.tpp&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_macierz_8hpp_html_abe7a16c61b35bfeead990e29e0e894ef"><div class="ttname"><a href="_macierz_8hpp.html#abe7a16c61b35bfeead990e29e0e894ef">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;strm, const MacierzRot&lt; SIZE &gt; &amp;mac)</div></div>
+<div class="ttc" id="a_wektor_8hpp_html"><div class="ttname"><a href="_wektor_8hpp.html">Wektor.hpp</a></div></div>
+<div class="ttc" id="aclass_macierz_rot_html"><div class="ttname"><a href="class_macierz_rot.html">MacierzRot</a></div><div class="ttdef"><b>Definition:</b> <a href="_macierz_8hpp_source.html#l00008">Macierz.hpp:9</a></div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a0e9ba458e954db7e54c5fe8ff6189498"><div class="ttname"><a href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">MacierzRot::Axis</a></div><div class="ttdeci">Axis</div><div class="ttdef"><b>Definition:</b> <a href="_macierz_8hpp_source.html#l00013">Macierz.hpp:14</a></div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f"><div class="ttname"><a href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f">MacierzRot::Axis::OY</a></div><div class="ttdeci">@ OY</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45"><div class="ttname"><a href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45">MacierzRot::Axis::OZ</a></div><div class="ttdeci">@ OZ</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a0e9ba458e954db7e54c5fe8ff6189498aa70baf8386f8c1f5cd75ed3038fdd89b"><div class="ttname"><a href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498aa70baf8386f8c1f5cd75ed3038fdd89b">MacierzRot::Axis::OX</a></div><div class="ttdeci">@ OX</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a133665294f8f3677e6786704456148e2"><div class="ttname"><a href="class_macierz_rot.html#a133665294f8f3677e6786704456148e2">MacierzRot::operator=</a></div><div class="ttdeci">MacierzRot&lt; SIZE &gt; &amp; operator=(const MacierzRot&lt; SIZE &gt; &amp;drugi)</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a310f77ff49e61911f269231e89b48c03"><div class="ttname"><a href="class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03">MacierzRot::operator[]</a></div><div class="ttdeci">const Wektor&lt; SIZE &gt; &amp; operator[](unsigned int n) const</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a40f33b89557a5087ef417fba7589a69a"><div class="ttname"><a href="class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a">MacierzRot::operator*</a></div><div class="ttdeci">Wektor&lt; SIZE &gt; operator*(const Wektor&lt; SIZE &gt; &amp;) const</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a983577f43dda4b04cb239ed92597416b"><div class="ttname"><a href="class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b">MacierzRot::operator[]</a></div><div class="ttdeci">Wektor&lt; SIZE &gt; &amp; operator[](unsigned int n)</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_a99578a8fc3322c60c761cd01448ec18d"><div class="ttname"><a href="class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d">MacierzRot::MacierzRot</a></div><div class="ttdeci">MacierzRot(double alpha, Axis o)</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_ab2253aeff9f91b6435c9f603d934d2e6"><div class="ttname"><a href="class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6">MacierzRot::MacierzRot</a></div><div class="ttdeci">MacierzRot()</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_ad464b0964c4eaef059ef5ea1ecc2cb6d"><div class="ttname"><a href="class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d">MacierzRot::MacierzRot</a></div><div class="ttdeci">MacierzRot(const MacierzRot&lt; SIZE &gt; &amp;druga)</div></div>
+<div class="ttc" id="aclass_macierz_rot_html_ad8620baae4f96ddfba50e1034f425af1"><div class="ttname"><a href="class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1">MacierzRot::tab</a></div><div class="ttdeci">std::array&lt; Wektor&lt; SIZE &gt;, SIZE &gt; tab</div><div class="ttdef"><b>Definition:</b> <a href="_macierz_8hpp_source.html#l00010">Macierz.hpp:10</a></div></div>
+<div class="ttc" id="aclass_macierz_rot_html_aeb0086879ad188462a29f4726865bb87"><div class="ttname"><a href="class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87">MacierzRot::operator*</a></div><div class="ttdeci">MacierzRot&lt; SIZE &gt; operator*(const MacierzRot&lt; SIZE &gt; &amp;) const</div></div>
+<div class="ttc" id="aclass_wektor_html"><div class="ttname"><a href="class_wektor.html">Wektor</a></div><div class="ttdef"><b>Definition:</b> <a href="_wektor_8hpp_source.html#l00010">Wektor.hpp:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="_macierz_8hpp.html">Macierz.hpp</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
