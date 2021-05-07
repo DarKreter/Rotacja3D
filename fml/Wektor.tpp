@@ -1,6 +1,7 @@
 #include "Wektor.hpp"
 #include <cassert>
 #include <cmath>
+#include <limits>
 
 
 template<size_t SIZE>
