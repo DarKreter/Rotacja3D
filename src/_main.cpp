@@ -1,15 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <gnuplot.hpp>
 #include <Figure.hpp>
+#include <Scene.hpp>
 #include "Macierz3x3.hpp"
 
 
 using namespace std;
-
-void GNUPlotInicjalizacja(string nazwaPliku, PzG::LaczeDoGNUPlota& lacze, Wektor<3> range);
-void Rysuj(const Figure& figure, PzG::LaczeDoGNUPlota& lacze);
-
 
 int main(int argc, char* argv[])
 {
@@ -23,14 +21,13 @@ int main(int argc, char* argv[])
     try
     {
 
-        char znak;
-        Figure figure(argv[1]);
-        PzG::LaczeDoGNUPlota lacze;
-        MacierzRot3x3 macierzRot;
-    
-    
-        GNUPlotInicjalizacja("prostopadloscian.dat", lacze, Wektor<3>({100,100,100}));
-        Rysuj(figure, lacze);
+        char znak; int nr;
+        Scene scene(Wektor3D({100,100,100}));
+        
+        for(int i=1; i<argc;++i)
+            scene.Add(argv[i]);
+        
+        scene.Draw();
 
         cout << "o - obrot bryly o zadana sekwencje katow" << endl
              << "t - powtorzenie poprzedniego obrotu" << endl
@@ -38,6 +35,7 @@ int main(int argc, char* argv[])
              << "p - przesuniecie bryly o zadany wektor" << endl
              << "w - wyswietlenie wspolrzednych wierzcholkow" << endl
              << "s - sprawdzenie dlugosci przeciwleglych bokow" << endl
+             << "e - usuniecie odpowiedniej figury" << endl
              << "m - wyswietl menu" << endl
              << "c - czysci ekran" << endl
              << "k - koniec dzialania programu" << endl;
@@ -52,22 +50,58 @@ int main(int argc, char* argv[])
             {
 
             case 'w':
-                cout << figure << endl;
+                
+                cin >> nr;
+                if (!cin.good())
+                {
+                    cin.clear();
+                    cin.ignore(std::numeric_limits<int>::max(), '\n');
+                    cout << "Blednie podany numer figury do wyswietlenia!" << endl;
+                    break;
+                }
+                try
+                {
+                    cout << scene[nr-1] << endl;
+                }
+                catch(std::out_of_range& exp)
+                {
+                    cout << "Numer figury moze byc tylko liczba naturalna z przedzialu (0;" + to_string(scene.size()) + "]!" << endl;
+                }
                 break;
+                
+            case 'e':
     
+                cin >> nr;
+                if (!cin.good())
+                {
+                    cin.clear();
+                    cin.ignore(std::numeric_limits<int>::max(), '\n');
+                    cout << "Blednie podany numer figury do wyswietlenia!" << endl;
+                    break;
+                }
+                try
+                {
+                    scene.Remove(nr-1);
+                    scene.Draw();
+                }
+                catch(std::out_of_range& exp)
+                {
+                    cout << "Numer figury moze byc tylko liczba naturalna z przedzialu (0;" + to_string(scene.size()) + "]!" << endl;
+                }
+                break;
             
             case 'r':
-                cout << "\nMacierz rotacji:\n" << macierzRot << "\n\n\n";
+                cout << "\nMacierz rotacji:\n" << scene() << "\n\n\n";
                 break;
                 
             case 'o':
                 
                 cout << "Podaj sekwencje oznaczen osi oraz katy obrotu w stopniach:";
-                
+
                 MacierzRot3x3::Axis axis;
                 double alpha; int ip;
-                macierzRot = MacierzRot<3>();   //Macierz jedynkowa
-                
+                scene() = MacierzRot<3>();   //Macierz jedynkowa
+
                 while(znak != '.')
                 {
                     cin >> znak;
@@ -76,38 +110,38 @@ int main(int argc, char* argv[])
                     case 'x': case 'X':
                         axis = MacierzRot3x3::Axis::OX;
                         break;
-        
+
                     case 'y': case 'Y':
                         axis = MacierzRot3x3::Axis::OY;
                         break;
-                        
+
                     case 'z': case 'Z':
                         axis = MacierzRot3x3::Axis::OZ;
                         break;
-                        
+
                     default:
                         cin.setstate(ios::failbit);
                     }
-                    
+
                     cin >> alpha;
-                    
-                    
+
+
                     if (!cin.good())
                     {
                         cin.clear();
                         cin.ignore(std::numeric_limits<int>::max(), '\n');
-                        
+
                         if(znak == '.')
                             break;
-                        
+
                         cout << "Blednie podana os obrotu lub kat!" << endl;
                         continue;
                     }
-                    
-                    macierzRot = MacierzRot<3>(alpha, axis) * macierzRot;
-                    
+
+                    scene() = MacierzRot<3>(alpha, axis) * scene();
+
                 }
-                
+
                 cout << "Podaj ilosc powtorzen podanej powyzej sekwencji: ";
                 while(true)
                 {
@@ -124,29 +158,81 @@ int main(int argc, char* argv[])
                 }
 //                [[clang::fallthrough]];
             case 't':
-                
-                for (int i = 0; i < ip; ++i)
-                    figure.Rotation(macierzRot);
-        
-                Rysuj(figure, lacze);
-                break;
-                
-            case 's':
-                figure.IsCuboid();
-                cout << endl;
-                break;
-                
-            case 'p':
+                cout << "Podaj numer figury ktora chcesz obrocic:";
+                cin >> nr;
+                if (!cin.good())
+                {
+                    cin.clear();
+                    cin.ignore(std::numeric_limits<int>::max(), '\n');
+                    cout << "Blednie podany numer figury do wyswietlenia!" << endl;
+                    break;
+                }
                 try
                 {
-                    Wektor<3> w;
+                    for (int i = 0; i < ip; ++i)
+                        scene[nr-1].Rotation(scene());
+    
+                    scene.Draw();
+                }
+                catch(std::out_of_range& exp)
+                {
+                    cout << "Numer figury moze byc tylko liczba naturalna z przedzialu (0;" + to_string(scene.size()) + "]!" << endl;
+                    break;
+                }
+                
+                break;
+
+            case 's':
+                cin >> nr;
+                if (!cin.good())
+                {
+                    cin.clear();
+                    cin.ignore(std::numeric_limits<int>::max(), '\n');
+                    cout << "Blednie podany numer figury do sprawdzenia!" << endl;
+                    break;
+                }
+                try
+                {
+                    scene[nr-1].IsCuboid();
+                    cout << endl;
+                }
+                catch(std::out_of_range& exp)
+                {
+                    cout << "Numer figury moze byc tylko liczba naturalna z przedzialu (0;" + to_string(scene.size()) + "]!" << endl;
+                    break;
+                }
+                
+                break;
+
+            case 'p':
+
+
+                try
+                {
+                    Wektor3D w;
                     cin >> w;
-                    figure.Translation(w);
-                    Rysuj(figure, lacze);
+    
+                    cout << "Podaj numer figury ktora chcesz obrocic:";
+                    cin >> nr;
+                    if (!cin.good())
+                    {
+                        cin.clear();
+                        cin.ignore(std::numeric_limits<int>::max(), '\n');
+                        cout << "Blednie podany numer figury do przesuniecia!" << endl;
+                        break;
+                    }
+                    
+                    scene[nr-1].Translation(w);
+                    scene.Draw();
                 }
                 catch (std::runtime_error& e)
                 {
                     cout << "Blednie podany wektor translacji!" << endl;
+                }
+                catch(std::out_of_range& exp)
+                {
+                    cout << "Numer figury moze byc tylko liczba naturalna z przedzialu (0;" + to_string(scene.size()) + "]!" << endl;
+                    break;
                 }
                 catch (...)
                 {
@@ -162,6 +248,7 @@ int main(int argc, char* argv[])
                      << "p - przesuniecie bryly o zadany wektor" << endl
                      << "w - wyswietlenie wspolrzednych wierzcholkow" << endl
                      << "s - sprawdzenie dlugosci przeciwleglych bokow" << endl
+                     << "e - usuniecie odpowiedniej figury" << endl
                      << "m - wyswietl menu" << endl
                      << "c - czysci ekran" << endl
                      << "k - koniec dzialania programu" << endl;
@@ -200,38 +287,5 @@ int main(int argc, char* argv[])
     
 }
 
-
-
-void GNUPlotInicjalizacja(string nazwaPliku, PzG::LaczeDoGNUPlota& lacze, Wektor<3> range)
-{
-    system(("cp " + nazwaPliku + " temp.dat").c_str());
-    
-    lacze.DodajNazwePliku("temp.dat",PzG::RR_Ciagly,2);
-    //lacze.DodajNazwePliku("temp.dat", PzG::RR_Punktowy, 2);
-    
-    lacze.ZmienTrybRys(PzG::TR_3D);
-    
-    lacze.UstawZakresX(-range[0],range[0]);
-    lacze.UstawZakresY(-range[1],range[1]);
-    lacze.UstawZakresZ(-range[2],range[2]);
-    
-}
-
-
-void Rysuj(const Figure& figure, PzG::LaczeDoGNUPlota& lacze)
-{
-    std::fstream  file;
-    
-    file.open("temp.dat", std::ios::out);
-    if (!file.is_open()) {
-        throw std::runtime_error("Nastapil problem podczas zapisu pliku!");
-    }
-    
-    file << figure << std::endl <<  figure[0] << std::endl << figure[1] << std::endl;
-    
-    file.close();
-    
-    lacze.Rysuj();
-}
 
 

@@ -101,11 +101,6 @@ bool Figure::IsCuboid()
 	return true;
 }
 
-Figure::~Figure()
-{
-	system("rm -f temp.dat");
-}
-
 std::ostream& operator<<(std::ostream& strm, const Figure& pr)
 {
     for (int i = 0; i < 8; ++i)

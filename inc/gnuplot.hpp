@@ -131,7 +131,7 @@ class LaczeDoGNUPlota {
    * Pole jest zarządcą listy nazw plików, z których są wczytywane
    * dane dotyczące rysowania obrysu brył przez program \e gnuplot.
    * Operacja ta wykonywana jest po wywołaniu polecenia.
-   * \link LaczeDoGNUPlota::Rysuj Rysuj\endlink.
+   * \link LaczeDoGNUPlota::Rysuj Draw\endlink.
    */
   static std::list<InfoPlikuDoRysowania>  _InfoPlikow;
 
@@ -163,7 +163,7 @@ class LaczeDoGNUPlota {
    * wymuszony na programie \p gnuplot poprzez wysłanie do niego
    * odpowiednich poleceń. Wspomniane wymuszenie jest realizowane
    * poprzez wywołanie polecenia 
-   * \link LaczeDoGNUPlota::Rysuj Rysuj()\endlink
+   * \link LaczeDoGNUPlota::Rysuj Draw()\endlink
    */
   TrybRysowania  _TrybRys;
    /*!
@@ -632,7 +632,7 @@ class LaczeDoGNUPlota {
   bool Rysuj();
   /*!
    *  Działa analogicznie jak metoda 
-   *  \link LaczeDoGNUPlota::Rysuj Rysuj\endlink, z tą różnicą, że 
+   *  \link LaczeDoGNUPlota::Rysuj Draw\endlink, z tą różnicą, że
    *  rysunek robota
    *  składowany jest w pliku o nazwie przekazanej przez parametr 
    *  \e NazwaPliku.

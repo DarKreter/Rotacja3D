@@ -17,9 +17,13 @@ target_include_directories(FIGURE PUBLIC ./inc ./src)
 add_library(GNUPLOT ./src/gnuplot.cpp)
 target_include_directories(GNUPLOT PUBLIC ./inc)
 
-set(LIBS WEKTOR MACIERZ FIGURE GNUPLOT)
+add_library(SCENE ./src/Scene.cpp)
+target_link_libraries(FIGURE GNUPLOT)
+target_include_directories(SCENE PUBLIC ./inc ./fml)
 
-add_executable(Rotacja3D ./src/_main.cpp)
+set(LIBS WEKTOR MACIERZ FIGURE GNUPLOT SCENE)
+
+add_executable(Rotacja3D ./src/_main.cpp src/Scene.cpp inc/Scene.hpp)
 target_link_libraries(Rotacja3D ${LIBS})
 
 target_compile_options(Rotacja3D PUBLIC -Wall -Wextra -pedantic)

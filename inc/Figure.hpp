@@ -12,7 +12,6 @@ class Figure
 public:
     Figure(std::string name);
     Figure() : wierzcholki({}) { ; }
-	~Figure();
 
 	const Wektor3D& operator[](unsigned int n) const;
     Wektor3D& operator[](unsigned int n);
