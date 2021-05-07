@@ -3,4 +3,5 @@
 cmake-build-debug/
 bin/
 *.sln
+*.png
 *.vcxproj*

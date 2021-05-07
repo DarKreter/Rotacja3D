@@ -9,20 +9,24 @@ class MacierzRot
 {
     std::array<Wektor<SIZE>, SIZE> tab;
 
-    MacierzRot() : tab{} { ; }
 public:
-    enum class OS
+    enum class Axis
     {
         OX, OY, OZ
     };
 
-    MacierzRot(double alpha, OS o = OS::OX);
+    MacierzRot();   //Macierz jednostkowa
+    MacierzRot(double alpha, Axis o);
+    MacierzRot(const MacierzRot<SIZE>& druga);
 
     const Wektor<SIZE>& operator[](unsigned int n) const;
     Wektor<SIZE>& operator[](unsigned int n);
 
     Wektor<SIZE> operator*(const Wektor<SIZE>&) const;
     MacierzRot<SIZE> operator*(const MacierzRot<SIZE>&) const;
+    
+    MacierzRot<SIZE>& operator=(const MacierzRot<SIZE>& drugi);
+    
 };
 
 template<size_t SIZE>

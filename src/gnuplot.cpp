@@ -1,5 +1,3 @@
-#if 0
-
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -460,5 +458,3 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
 
 } //___ Koniec przestrzeni nazw: PzG ____________________________________________
 
-
-#endif

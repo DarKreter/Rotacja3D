@@ -10,10 +10,9 @@ template<std::size_t SIZE>
 class Wektor
 {
 	std::array<double, SIZE> tab;
-
-
+	
 public:
-	Wektor(): tab{}										{;}
+	Wektor(): tab{}										    {;}
 	Wektor(std::array<double, SIZE> pkt) : tab{ pkt }		{;}
 	Wektor(const Wektor<SIZE>& temp) : tab{ temp.tab }		{;}
 
@@ -23,6 +22,9 @@ public:
 	Wektor<SIZE> operator+(const Wektor<SIZE>&) const;
 	Wektor<SIZE> operator-(const Wektor<SIZE>&) const;
 	Wektor<SIZE> operator*(double) const;
+    
+    Wektor<SIZE>& operator=(const Wektor<SIZE>& drugi);
+	
 	double Length();
 
 };
