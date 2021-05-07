@@ -61,7 +61,7 @@ bool Figure::IsCuboid()
 
 
     for(int i=0;i<3;++i)
-        if( abs(bok1[i] - bok1[3]) > epsilon )
+        if( std::abs(bok1[i] - bok1[3]) > epsilon )
         {
             std::cout << "Pierwsze cztery boki nie sa sobie rowne!!!" << std::endl;
             goto jeden;
@@ -74,7 +74,7 @@ bool Figure::IsCuboid()
     
     
     for(int i=0;i<3;++i)
-        if( abs(bok2[i] - bok2[3]) > epsilon )
+        if( std::abs(bok2[i] - bok2[3]) > epsilon )
         {
             std::cout << "Srodkowe cztery boki nie sa sobie rowne!!!" << std::endl;
             goto dwa;
@@ -87,7 +87,7 @@ bool Figure::IsCuboid()
     
     
     for(int i=0;i<3;++i)
-        if( abs(bok3[i] - bok3[3]) > epsilon )
+        if( std::abs(bok3[i] - bok3[3]) > epsilon )
         {
             std::cout << "Ostatnie cztery boki nie sa sobie rowne!!!" << std::endl;
             goto trzy;
