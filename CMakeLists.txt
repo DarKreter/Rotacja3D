@@ -22,4 +22,4 @@ set(LIBS WEKTOR MACIERZ FIGURE GNUPLOT)
 add_executable(Rotacja3D ./src/_main.cpp)
 target_link_libraries(Rotacja3D ${LIBS})
 
-target_compile_options(Rotacja3D PUBLIC -Wall -Wextra -pedantic -Werror)
+target_compile_options(Rotacja3D PUBLIC -Wall -Wextra -pedantic)

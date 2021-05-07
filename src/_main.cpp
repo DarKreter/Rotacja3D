@@ -122,7 +122,7 @@ int main(int argc, char* argv[])
                     else
                         break;
                 }
-                [[fallthrough]];
+//                [[clang::fallthrough]];
             case 't':
                 
                 for (int i = 0; i < ip; ++i)
