@@ -8,6 +8,7 @@ var class_macierz_rot =
     [ "MacierzRot", "class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6", null ],
     [ "MacierzRot", "class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d", null ],
     [ "MacierzRot", "class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d", null ],
+    [ "MacierzRot", "class_macierz_rot.html#ab329bf240e8fd7db2773b7c8708222f7", null ],
     [ "operator*", "class_macierz_rot.html#a1ede52ab3bf4e2d266fa200e95eac531", null ],
     [ "operator*", "class_macierz_rot.html#ae63278cc8d58289ccd5070a41bdc02e1", null ],
     [ "operator=", "class_macierz_rot.html#a3584852e2ba2ff79077360b7d170ef58", null ],
