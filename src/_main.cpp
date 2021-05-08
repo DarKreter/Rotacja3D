@@ -1,21 +1,27 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include <gnuplot.hpp>
 #include <Figure.hpp>
 #include <Scene.hpp>
-#include "Macierz3x3.hpp"
-
+#include <Macierz3x3.hpp>
 
 using namespace std;
 
+/**
+ * @brief  Funkcja main
+ *
+ * Zawiera główną funkcjonalność programu
+ *
+ * @param argc - ilość argumentów przysłanych w linii wywołania
+ * @param argv - tablica argumentów wywołania
+ * @return - informacja o powodzeniu, bądź nie programu
+ */
 int main(int argc, char* argv[])
 {
     
     if (argc < 2)
     {
         cout << "Brak nazwy pliku z prostokatem jako argument wywolania!" << endl;
-        exit(0);
+        exit(1);
     }
 
     try
@@ -283,8 +289,6 @@ int main(int argc, char* argv[])
 
 
     return 0;
-
-    
 }
 
 

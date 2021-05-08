@@ -5,7 +5,6 @@
  * \file
  * \brief Definicja klasy Figura
  *
- *  Plik zawierający definicję klasy Figura.
  */
 
 #include <iostream>
@@ -14,6 +13,11 @@
 
 /**
  * \brief Modeluje pojęcie Prostopadłościanu
+ *
+ * Przechowuje 8 wierzchołków prostopadłościanu w tablicy.
+ * Dostarcza narzędzia do przesuwania go w przestrzeni o wektor
+ * oraz obrót o zadany kąt względem danej osi układu współrzędnych.
+ * Pozwala także na wygodne wypisanie i wczytanie go ze strumienia standardowego.
  */
 class Figure
 {
@@ -48,16 +52,16 @@ public:
     Wektor3D& operator[](unsigned int n);
     
     /**
-     * \brief  Funkcja składowa wykonująca rotacje bryły.
+     * \brief  Rotacja bryły.
      */
 	void Rotation(MacierzRot3x3 mRotacji);
 	
     /**
-     * \brief  Funkcja składowa wykonująca translację bryły.
+     * \brief  Translacja bryły.
      */
 	void Translation(Wektor<3> wektor);
     /**
-     * \brief  Funkcja składowa sprawdzająca czy bryła dalej jest poprawnym prostopadłościanem.
+     * \brief  Sprawdzanie czy bryła dalej jest poprawnym prostopadłościanem.
      */
 	void IsCuboid();
 };

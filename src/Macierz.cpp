@@ -1,5 +1,11 @@
 #include <Macierz.hpp>
 
+/**
+ * Specjalizacja zdefiniowana dla wartości parametru szablonowego równego 2.
+ *
+ * @param kat - kąt o który będziemy obracać
+ * @param o - oś układu współrzędnych wokół której chcemy wykonywać obrót
+ */
 template<>
 MacierzRot<2>::MacierzRot(double kat, Axis o)
 {
@@ -9,6 +15,12 @@ MacierzRot<2>::MacierzRot(double kat, Axis o)
 	tab[1][1] = cos(kat * M_PI / 180);
 }
 
+/**
+ * Specjalizacja zdefiniowana dla wartości parametru szablonowego równego 3.
+ *
+ * @param kat - kąt o który będziemy obracać
+ * @param o - oś układu współrzędnych wokół której chcemy wykonywać obrót
+ */
 template<>
 MacierzRot<3>::MacierzRot(double alpha, Axis o)
 {

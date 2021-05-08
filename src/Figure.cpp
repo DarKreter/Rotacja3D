@@ -3,7 +3,7 @@
 #include <iomanip>
 
 /**
- * Inicjalizuje wszystkie wierzchołki na podstawie danych z pliku.
+ * Wszystkie wierzchołki zostają wczytane bezpośrednio z pliku.
  *
  * @param name - nazwa pliku który zostanie otworzony i zostaną z niego
  * wczytane wszystkie wierzchołki

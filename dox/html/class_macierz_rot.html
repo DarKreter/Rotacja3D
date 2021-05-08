@@ -21,7 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Logo Simple Black.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Faza.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rotacja3D
    &#160;<span id="projectnumber">0.1.0.0</span>
@@ -70,6 +70,9 @@ $(document).ready(function(){initNavTree('class_macierz_rot.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Modeluje pojęcie macierzy rotacji.  
+ <a href="class_macierz_rot.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -78,25 +81,34 @@ Typy publiczne</h2></td></tr>
 , <a class="el" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f">OY</a>
 , <a class="el" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45">OZ</a>
  }</td></tr>
+<tr class="memdesc:a0e9ba458e954db7e54c5fe8ff6189498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Określa rodzaj osi wokół której wykonywany będzie obrót.  <a href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">Więcej...</a><br /></td></tr>
 <tr class="separator:a0e9ba458e954db7e54c5fe8ff6189498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:ab2253aeff9f91b6435c9f603d934d2e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6">MacierzRot</a> ()</td></tr>
+<tr class="memdesc:ab2253aeff9f91b6435c9f603d934d2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizacja macierzy rotacji.  <a href="class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6">Więcej...</a><br /></td></tr>
 <tr class="separator:ab2253aeff9f91b6435c9f603d934d2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99578a8fc3322c60c761cd01448ec18d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d">MacierzRot</a> (double alpha, <a class="el" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">Axis</a> o)</td></tr>
+<tr class="memdesc:a99578a8fc3322c60c761cd01448ec18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje macierz rotacji na podstawie kąta obotu i osi wokół której ma być wykonany obrót.  <a href="class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d">Więcej...</a><br /></td></tr>
 <tr class="separator:a99578a8fc3322c60c761cd01448ec18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad464b0964c4eaef059ef5ea1ecc2cb6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d">MacierzRot</a> (const <a class="el" href="class_macierz_rot.html">MacierzRot</a>&lt; SIZE &gt; &amp;druga)</td></tr>
+<tr class="memdesc:ad464b0964c4eaef059ef5ea1ecc2cb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor kopiujący.  <a href="class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d">Więcej...</a><br /></td></tr>
 <tr class="separator:ad464b0964c4eaef059ef5ea1ecc2cb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310f77ff49e61911f269231e89b48c03"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03">operator[]</a> (unsigned int n) const</td></tr>
+<tr class="memdesc:a310f77ff49e61911f269231e89b48c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator dostępowy do wierszów macierzy.  <a href="class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03">Więcej...</a><br /></td></tr>
 <tr class="separator:a310f77ff49e61911f269231e89b48c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983577f43dda4b04cb239ed92597416b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b">operator[]</a> (unsigned int n)</td></tr>
+<tr class="memdesc:a983577f43dda4b04cb239ed92597416b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator dostępowy do wierszów macierzy.  <a href="class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b">Więcej...</a><br /></td></tr>
 <tr class="separator:a983577f43dda4b04cb239ed92597416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40f33b89557a5087ef417fba7589a69a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a">operator*</a> (const <a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt; &amp;) const</td></tr>
+<tr class="memdesc:a40f33b89557a5087ef417fba7589a69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modeluje pojęcie mnożenia macierzy przez wektor.  <a href="class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a">Więcej...</a><br /></td></tr>
 <tr class="separator:a40f33b89557a5087ef417fba7589a69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0086879ad188462a29f4726865bb87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_macierz_rot.html">MacierzRot</a>&lt; SIZE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87">operator*</a> (const <a class="el" href="class_macierz_rot.html">MacierzRot</a>&lt; SIZE &gt; &amp;) const</td></tr>
+<tr class="memdesc:aeb0086879ad188462a29f4726865bb87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modeluje pojęcie mnozenia macierzy przez inną macierz.  <a href="class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87">Więcej...</a><br /></td></tr>
 <tr class="separator:aeb0086879ad188462a29f4726865bb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a133665294f8f3677e6786704456148e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_macierz_rot.html">MacierzRot</a>&lt; SIZE &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a133665294f8f3677e6786704456148e2">operator=</a> (const <a class="el" href="class_macierz_rot.html">MacierzRot</a>&lt; SIZE &gt; &amp;drugi)</td></tr>
+<tr class="memdesc:a133665294f8f3677e6786704456148e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopiujący operator przypisania.  <a href="class_macierz_rot.html#a133665294f8f3677e6786704456148e2">Więcej...</a><br /></td></tr>
 <tr class="separator:a133665294f8f3677e6786704456148e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1950400a25c5ebe581d0ca2e9e701181"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#a1950400a25c5ebe581d0ca2e9e701181">MacierzRot</a> (double kat, <a class="el" href="class_macierz_rot.html#a0e9ba458e954db7e54c5fe8ff6189498">Axis</a> o)</td></tr>
 <tr class="separator:a1950400a25c5ebe581d0ca2e9e701181"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,14 +116,22 @@ Metody publiczne</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:ad8620baae4f96ddfba50e1034f425af1"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt;, SIZE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1">tab</a></td></tr>
+<tr class="memdesc:ad8620baae4f96ddfba50e1034f425af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablica przechowująca wartości wszystkich pól macierzy.  <a href="class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1">Więcej...</a><br /></td></tr>
 <tr class="separator:ad8620baae4f96ddfba50e1034f425af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><h3>template&lt;size_t SIZE&gt;<br />
 class MacierzRot&lt; SIZE &gt;</h3>
 
+<p>Macierz rotacji zawsze jest intepretowana jako macierz kwadratowa SIZExSIZE</p>
+<dl class="tparams"><dt>Parametry Szablonu</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">SIZE</td><td>- Określa wymiar macierzy rotacji </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00008">8</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00020">20</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja składowych wyliczanych</h2>
 <a id="a0e9ba458e954db7e54c5fe8ff6189498"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e9ba458e954db7e54c5fe8ff6189498">&#9670;&nbsp;</a></span>Axis</h2>
@@ -134,13 +154,17 @@ template&lt;size_t SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Obrót może być wykonany wokół jednej z 3 osi układu współrzędnych </p>
 <table class="fieldtable">
-<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498aa70baf8386f8c1f5cd75ed3038fdd89b"></a>OX&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f"></a>OY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45"></a>OZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498aa70baf8386f8c1f5cd75ed3038fdd89b"></a>OX&#160;</td><td class="fielddoc"><p>Oś OX układu współrzędnych </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498a33416c8a3cd0db84792ee63a071fa28f"></a>OY&#160;</td><td class="fielddoc"><p>Oś OY układu współrzędnych </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0e9ba458e954db7e54c5fe8ff6189498a85454f106a1146a23a110ce72c032c45"></a>OZ&#160;</td><td class="fielddoc"><p>Oś OZ układu współrzędnych </p>
+</td></tr>
 </table>
 
-<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00013">13</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00035">35</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
 
 </div>
 </div>
@@ -239,8 +263,16 @@ template&lt;size_t SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specjalizacja zdefiniowana dla wartości parametru szablonowego równego 2.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kat</td><td>- kąt o który będziemy obracać </td></tr>
+    <tr><td class="paramname">o</td><td>- oś układu współrzędnych wokół której chcemy wykonywać obrót </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_macierz_8cpp_source.html#l00004">4</a> pliku <a class="el" href="_macierz_8cpp_source.html">Macierz.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_macierz_8cpp_source.html#l00010">10</a> pliku <a class="el" href="_macierz_8cpp_source.html">Macierz.cpp</a>.</p>
 
 </div>
 </div>
@@ -367,8 +399,9 @@ template&lt;size_t SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Składa się ona z wektorów </p>
 
-<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00010">10</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_macierz_8hpp_source.html#l00027">27</a> pliku <a class="el" href="_macierz_8hpp_source.html">Macierz.hpp</a>.</p>
 
 </div>
 </div>

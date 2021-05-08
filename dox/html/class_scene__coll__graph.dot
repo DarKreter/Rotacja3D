@@ -3,9 +3,11 @@ digraph "Scene"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="Scene",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Scene",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Klasa modeluje pojęcie wielu brył naraz w przestrzeni 3D."];
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lacze" ,fontname="Helvetica"];
   Node2 [label="PzG::LaczeDoGNUPlota",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pz_g_1_1_lacze_do_g_n_u_plota.html",tooltip="Klasa realizuje interfejs do programu GNUPlot."];
   Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" macierzRot" ,fontname="Helvetica"];
   Node3 [label="MacierzRot\< 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_macierz_rot.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< 3 \>" ,fontname="Helvetica"];
+  Node4 [label="MacierzRot\< SIZE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_macierz_rot.html",tooltip="Modeluje pojęcie macierzy rotacji."];
 }

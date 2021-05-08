@@ -6,7 +6,7 @@ digraph "PzG::LaczeDoGNUPlota::Rysuj"
   rankdir="RL";
   Node1 [label="PzG::LaczeDoGNUPlota\l::Rysuj",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Scene::Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#a4813338ee7c6c995f5bb6f10e3673804",tooltip=" "];
+  Node2 [label="Scene::Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#a4813338ee7c6c995f5bb6f10e3673804",tooltip="Odświeżenie obszaru roboczego programu gnuplot."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip="Funkcja main."];
 }

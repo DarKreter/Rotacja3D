@@ -3,7 +3,15 @@
 #include <cmath>
 #include <limits>
 
-
+/**
+ * Możemy za jego pomocą dostać się do poszczególnych współrzędnych wektora.
+ * Umożliwa on dostęp do współrzędnych, bez możliwości modyfikacji.
+ * Gdy indeks jest spoza zakresu [0;SIZE] zostanie rzucony wyjątek std::out_of_range
+ *
+ * @tparam SIZE - Określa wymiarowość w jakiej znajduje się wektor
+ * @param n - indeks współrzędnej do której chcemy uzyskać dostęp
+ * @return Niemodyfikowalna wartość określonej indeksem współrzędnej
+ */
 template<size_t SIZE>
 const double& Wektor<SIZE>::operator[](unsigned int n) const
 {
@@ -12,6 +20,15 @@ const double& Wektor<SIZE>::operator[](unsigned int n) const
 	return tab[n];
 }
 
+/**
+ * Możemy za jego pomocą dostać się do poszczególnych współrzędnych wektora.
+ * Umożliwa on dostęp do współrzędnych, z możliwością modyfikacji.
+ * Gdy indeks jest spoza zakresu [0;SIZE] zostanie rzucony wyjątek std::out_of_range
+ *
+ * @tparam SIZE - Określa wymiarowość w jakiej znajduje się wektor
+ * @param n - indeks współrzędnej do której chcemy uzyskać dostęp
+ * @return Modyfikowalna referencjado  określonej indeksem współrzędnej
+ */
 template<size_t SIZE>
 double& Wektor<SIZE>::operator[](unsigned int n)
 {
@@ -20,6 +37,13 @@ double& Wektor<SIZE>::operator[](unsigned int n)
 	return tab[n];
 }
 
+/**
+ * Dodaje odpowiednie składowe dwóch wektorów i zwraca wynik.
+ *
+ * @tparam SIZE - Określa wymiar wektora
+ * @param second - Wektor który dodajemy
+ * @return Zwraca wynik dodawania dwóch wektorów
+ */
 template<size_t SIZE>
 Wektor<SIZE> Wektor<SIZE>::operator+(const Wektor<SIZE>& second) const
 {
@@ -30,6 +54,13 @@ Wektor<SIZE> Wektor<SIZE>::operator+(const Wektor<SIZE>& second) const
 	return temp;
 }
 
+/**
+ * Odejmuje odpowiednie składowe dwóch wektorów i zwraca wynik.
+ *
+ * @tparam SIZE - Określa wymiar wektora
+ * @param second - Wektor który odejmujemy
+ * @return Zwraca wynik odejmowania dwóch wektorów
+ */
 template<size_t SIZE>
 Wektor<SIZE> Wektor<SIZE>::operator-(const Wektor<SIZE>& second) const
 {
@@ -40,6 +71,13 @@ Wektor<SIZE> Wektor<SIZE>::operator-(const Wektor<SIZE>& second) const
 	return temp;
 }
 
+/**
+ * Mnoży wszystkie składowe wektora przez przysłaną stałą.
+ *
+ * @tparam SIZE - Określa wymiar wektora
+ * @param st - stała przez którą mnożymy
+ * @return Zwraca wynik przemnożenia wektora przez stałą.
+ */
 template<size_t SIZE>
 Wektor<SIZE> Wektor<SIZE>::operator*(double st) const
 {
@@ -50,6 +88,11 @@ Wektor<SIZE> Wektor<SIZE>::operator*(double st) const
 	return temp;
 }
 
+/**
+ *
+ * @tparam SIZE - Określa wymiar wektora
+ * @return Zwraca długość wektora
+ */
 template<size_t SIZE>
 double Wektor<SIZE>::Length()
 {
@@ -60,6 +103,14 @@ double Wektor<SIZE>::Length()
 	return sqrt(sum);
 }
 
+/**
+ * Funkcja kopiująca wartości współrzędnych wektora do innego obiektu tej samej klasy
+ * Jeśli spróbujemy wpisać obiekt do samego siebie, funkcja jedynie zwróci referencję do samego siebie.
+ *
+ * @tparam SIZE - Określa wymiar wektora
+ * @param drugi - Obiekt z którego kopiujemy wartości współrzędnych
+ * @return Zwraca referencję do obiektu do którego wpisywalismy dane
+ */
 template<std::size_t SIZE>
 Wektor<SIZE> &Wektor<SIZE>::operator=(const Wektor<SIZE> &drugi)
 {
@@ -72,6 +123,13 @@ Wektor<SIZE> &Wektor<SIZE>::operator=(const Wektor<SIZE> &drugi)
     return (*this);
 }
 
+/**
+ * Wczytanie wektora z odpowiedniego strumienia
+ *
+ * @param strm - strumien z którego ma zostać wczytany wektor
+ * @param wek - wektor który ma zostać wczytany
+ * @return zwracamy referencję do przysłanego strumienia
+ */
 template<size_t SIZE>
 std::istream& operator >> (std::istream& strm, Wektor<SIZE>& wek)
 {
@@ -91,6 +149,13 @@ std::istream& operator >> (std::istream& strm, Wektor<SIZE>& wek)
 	return strm;
 }
 
+/**
+ * Wypisanie wektora na odpowiedni strumień
+ *
+ * @param strm - strumien na który ma zostać wypisany wektor
+ * @param wek - wektor który ma zostać wypisany
+ * @return zwracamy referencję do przysłanego strumienia
+ */
 template <size_t SIZE>
 std::ostream& operator << (std::ostream& strm, const Wektor<SIZE>& wek)
 {
