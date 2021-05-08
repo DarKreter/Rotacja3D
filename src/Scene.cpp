@@ -3,6 +3,12 @@
 #include <utility>
 
 /**
+ * @file
+ * @brief Definicje funkcji składowych klasy Scene
+ */
+
+
+/**
  * Na podstawie 3 wartości przesłanych w Wektorze3D,
  * ustawiany jest zakres wartości wyświetlany na osiach w programie gnuplot.
  * Konstruktor jednocześnie inicjalizuje podstawowe parametry gnuplota,

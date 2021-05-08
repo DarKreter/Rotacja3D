@@ -3,6 +3,11 @@
 #include <iomanip>
 
 /**
+ * @file
+ * @brief Definicje funkcji składowych klasy Figure
+ */
+
+/**
  * Wszystkie wierzchołki zostają wczytane bezpośrednio z pliku.
  *
  * @param name - nazwa pliku który zostanie otworzony i zostaną z niego

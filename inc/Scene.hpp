@@ -6,7 +6,7 @@
 
 /*!
  * @file
- * @brief Definicja klasy Scena
+ * @brief Definicja klasy Scene
  *
  */
  

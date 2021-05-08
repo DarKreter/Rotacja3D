@@ -2,6 +2,11 @@
 #include <cmath>
 
 /**
+ * @file
+ * @brief Definicje szablonów klasy MacierzRot
+ */
+
+/**
  * Tworzy macierz rotacji na podstawie innego obiektu klasy MacierzRot o tym samym rozmiarze
  *
  * @tparam SIZE - Określa wymiar macierzy rotacji

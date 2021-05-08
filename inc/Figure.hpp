@@ -3,7 +3,7 @@
 
 /*!
  * \file
- * \brief Definicja klasy Figura
+ * \brief Definicja klasy Figure
  *
  */
 

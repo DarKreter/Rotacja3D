@@ -8,11 +8,10 @@ var class_macierz_rot =
     [ "MacierzRot", "class_macierz_rot.html#ab2253aeff9f91b6435c9f603d934d2e6", null ],
     [ "MacierzRot", "class_macierz_rot.html#a99578a8fc3322c60c761cd01448ec18d", null ],
     [ "MacierzRot", "class_macierz_rot.html#ad464b0964c4eaef059ef5ea1ecc2cb6d", null ],
-    [ "MacierzRot", "class_macierz_rot.html#a1950400a25c5ebe581d0ca2e9e701181", null ],
-    [ "operator*", "class_macierz_rot.html#aeb0086879ad188462a29f4726865bb87", null ],
-    [ "operator*", "class_macierz_rot.html#a40f33b89557a5087ef417fba7589a69a", null ],
-    [ "operator=", "class_macierz_rot.html#a133665294f8f3677e6786704456148e2", null ],
-    [ "operator[]", "class_macierz_rot.html#a983577f43dda4b04cb239ed92597416b", null ],
-    [ "operator[]", "class_macierz_rot.html#a310f77ff49e61911f269231e89b48c03", null ],
+    [ "operator*", "class_macierz_rot.html#a1ede52ab3bf4e2d266fa200e95eac531", null ],
+    [ "operator*", "class_macierz_rot.html#ae63278cc8d58289ccd5070a41bdc02e1", null ],
+    [ "operator=", "class_macierz_rot.html#a3584852e2ba2ff79077360b7d170ef58", null ],
+    [ "operator[]", "class_macierz_rot.html#ac6fe16df0027ef9e526ccda797de805c", null ],
+    [ "operator[]", "class_macierz_rot.html#aa2974cf0caf5d356a7132a2216f0c94f", null ],
     [ "tab", "class_macierz_rot.html#ad8620baae4f96ddfba50e1034f425af1", null ]
 ];

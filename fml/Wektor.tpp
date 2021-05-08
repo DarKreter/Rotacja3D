@@ -4,6 +4,11 @@
 #include <limits>
 
 /**
+ * @file
+ * @brief Definicje szablonów klasy Wektor
+ */
+
+/**
  * Możemy za jego pomocą dostać się do poszczególnych współrzędnych wektora.
  * Umożliwa on dostęp do współrzędnych, bez możliwości modyfikacji.
  * Gdy indeks jest spoza zakresu [0;SIZE] zostanie rzucony wyjątek std::out_of_range

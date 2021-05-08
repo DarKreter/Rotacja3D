@@ -5,14 +5,14 @@ digraph "Wektor3D.hpp"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="Wektor3D.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Definicja klasy Wektor3D."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Figure.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_figure_8hpp.html",tooltip="Definicja klasy Figura."];
+  Node2 [label="Figure.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_figure_8hpp.html",tooltip="Definicja klasy Figure."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Scene.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scene_8hpp.html",tooltip="Definicja klasy Scena."];
+  Node3 [label="Scene.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scene_8hpp.html",tooltip="Definicja klasy Scene."];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="_main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__main_8cpp.html",tooltip=" "];
+  Node4 [label="_main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__main_8cpp.html",tooltip="Funkcja main i główna funckjonalność programu."];
   Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="Scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scene_8cpp.html",tooltip=" "];
+  Node5 [label="Scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scene_8cpp.html",tooltip="Definicje funkcji składowych klasy Scene."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="Figure.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_figure_8cpp.html",tooltip=" "];
+  Node6 [label="Figure.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_figure_8cpp.html",tooltip="Definicje funkcji składowych klasy Figure."];
 }

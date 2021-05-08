@@ -24,12 +24,42 @@
 */
 var NAVTREE =
 [
-  [ "Rotacja3D", "index.html", ]
+  [ "Rotacja3D", "index.html", [
+    [ "Przestrzenie nazw", "namespaces.html", [
+      [ "Lista przestrzeni nazw", "namespaces.html", "namespaces_dup" ],
+      [ "Składowe przestrzeni nazw", "namespacemembers.html", [
+        [ "Wszystko", "namespacemembers.html", null ],
+        [ "Funkcje", "namespacemembers_func.html", null ],
+        [ "Wyliczenia", "namespacemembers_enum.html", null ],
+        [ "Wartości wyliczeń", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
+    [ "Klasy", "annotated.html", [
+      [ "Lista klas", "annotated.html", "annotated_dup" ],
+      [ "Indeks klas", "classes.html", null ],
+      [ "Składowe klas", "functions.html", [
+        [ "Wszystko", "functions.html", null ],
+        [ "Funkcje", "functions_func.html", null ],
+        [ "Zmienne", "functions_vars.html", null ],
+        [ "Wyliczenia", "functions_enum.html", null ]
+      ] ]
+    ] ],
+    [ "Pliki", "files.html", [
+      [ "Lista plików", "files.html", "files_dup" ],
+      [ "Składowe plików", "globals.html", [
+        [ "Wszystko", "globals.html", null ],
+        [ "Funkcje", "globals_func.html", null ],
+        [ "Zmienne", "globals_vars.html", null ],
+        [ "Definicje typów", "globals_type.html", null ],
+        [ "Definicje", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"__main_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -7,7 +7,7 @@ digraph "Macierz3x3.hpp"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Macierz.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_macierz_8hpp.html",tooltip="Definicja klasy MacierzRot(Macierz Rotacji)"];
+  Node3 [label="Macierz.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_macierz_8hpp.html",tooltip="Definicja klasy MacierzRot."];
   Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="Wektor.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor_8hpp.html",tooltip="Definicja klasy szablonowej Wektor."];
@@ -19,7 +19,7 @@ digraph "Macierz3x3.hpp"
   Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="Wektor.tpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor_8tpp.html",tooltip=" "];
+  Node8 [label="Wektor.tpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="Macierz.tpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_macierz_8tpp.html",tooltip=" "];
+  Node9 [label="Macierz.tpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

@@ -74,7 +74,17 @@ $(document).ready(function(){initNavTree('_wektor_8hpp.html',''); initResizable(
 <code>#include &lt;array&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="_wektor_8tpp_source.html">Wektor.tpp</a>&quot;</code><br />
+<code>#include &quot;Wektor.tpp&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla Wektor.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_wektor_8hpp__incl.png" border="0" usemap="#a_wektor_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="_wektor_8hpp__dep__incl.png" border="0" usemap="#a_wektor_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="_wektor_8hpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
@@ -108,13 +118,13 @@ template&lt;size_t SIZE&gt; </div>
           <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>strm</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt; &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>wek</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,6 +133,17 @@ template&lt;size_t SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Wypisanie wektora na odpowiedni strumień</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strm</td><td>- strumien na który ma zostać wypisany wektor </td></tr>
+    <tr><td class="paramname">wek</td><td>- wektor który ma zostać wypisany </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>zwracamy referencję do przysłanego strumienia </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_wektor_8cpp_source.html#l00165">165</a> pliku <a class="el" href="_wektor_8cpp_source.html">Wektor.cpp</a>.</p>
 
 </div>
 </div>
@@ -138,13 +159,13 @@ template&lt;size_t SIZE&gt; </div>
           <td class="memname">std::istream&amp; operator&gt;&gt; </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>strm</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_wektor.html">Wektor</a>&lt; SIZE &gt; &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>wek</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -153,6 +174,17 @@ template&lt;size_t SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Wczytanie wektora z odpowiedniego strumienia</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strm</td><td>- strumien z którego ma zostać wczytany wektor </td></tr>
+    <tr><td class="paramname">wek</td><td>- wektor który ma zostać wczytany </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>zwracamy referencję do przysłanego strumienia </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_wektor_8cpp_source.html#l00139">139</a> pliku <a class="el" href="_wektor_8cpp_source.html">Wektor.cpp</a>.</p>
 
 </div>
 </div>

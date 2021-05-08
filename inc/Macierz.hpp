@@ -3,7 +3,7 @@
 
 /**
  * @file
- * @brief Definicja klasy MacierzRot(Macierz Rotacji)
+ * @brief Definicja klasy MacierzRot
  */
 
 #include <iostream>

@@ -8,15 +8,15 @@ var files_dup =
     [ "Figure.hpp", "_figure_8hpp.html", "_figure_8hpp" ],
     [ "gnuplot.cpp", "gnuplot_8cpp.html", "gnuplot_8cpp" ],
     [ "gnuplot.hpp", "gnuplot_8hpp.html", "gnuplot_8hpp" ],
-    [ "Macierz.cpp", "_macierz_8cpp.html", null ],
+    [ "fml/Macierz.cpp", "fml_2_macierz_8cpp.html", "fml_2_macierz_8cpp" ],
+    [ "src/Macierz.cpp", "src_2_macierz_8cpp.html", null ],
     [ "Macierz.hpp", "_macierz_8hpp.html", "_macierz_8hpp" ],
-    [ "Macierz.tpp", "_macierz_8tpp.html", null ],
     [ "Macierz3x3.hpp", "_macierz3x3_8hpp.html", "_macierz3x3_8hpp" ],
     [ "Scene.cpp", "_scene_8cpp.html", null ],
     [ "Scene.hpp", "_scene_8hpp.html", [
       [ "Scene", "class_scene.html", "class_scene" ]
     ] ],
+    [ "Wektor.cpp", "_wektor_8cpp.html", "_wektor_8cpp" ],
     [ "Wektor.hpp", "_wektor_8hpp.html", "_wektor_8hpp" ],
-    [ "Wektor.tpp", "_wektor_8tpp.html", null ],
     [ "Wektor3D.hpp", "_wektor3_d_8hpp.html", "_wektor3_d_8hpp" ]
 ];

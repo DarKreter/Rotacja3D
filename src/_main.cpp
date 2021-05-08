@@ -4,6 +4,11 @@
 #include <Scene.hpp>
 #include <Macierz3x3.hpp>
 
+/**
+ * @file
+ * @brief Funkcja main i główna funckjonalność programu
+ */
+
 using namespace std;
 
 /**
